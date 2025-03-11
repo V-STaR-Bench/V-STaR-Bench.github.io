@@ -76,7 +76,7 @@
           <!-- <br> -->
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">&#8224 corresponding authors </span>
+            <span class="author-block">&#8224 corresponding author </span>
         </div>
 
         <div class="is-size-5 publication-authors">
@@ -157,9 +157,7 @@
       <div class="hero-body">
             <img src="assets/vbench/images/dim_results/motivation_v2.png" style="width:1000px; margin-bottom:10px" alt="Teaser."/>
       <p style="margin-top: 0;">
-        <b>Motivation of VBench.</b> Illustration of the challenge in evaluating spatio-temporal reasoning ability. 
-   In both examples, the model correctly identifies objects, but its performance on related temporal and spatial questions varies greatly. 
-   This inconsistency suggests that correct answers may result from pretraining co-occurrence biases rather than true understanding. Existing benchmarks focus on object identification but fail to determine whether models truly engage in spatio-temporal reasoning. Our V-STaR benchmark fills this gap by evaluating how models integrate spatial, temporal, and causal relationships in video understanding.
+        <b>Motivation of VBench.</b> Illustration of the challenge in evaluating spatio-temporal reasoning ability. In both examples, the model correctly identifies objects, but its performance on related temporal and spatial questions varies greatly. This inconsistency suggests that correct answers may result from pretraining co-occurrence biases rather than true understanding. Existing benchmarks focus on object identification but fail to determine whether models truly engage in spatio-temporal reasoning. Our V-STaR benchmark fills this gap by evaluating how models integrate spatial, temporal, and causal relationships in video understanding.
     </div>
   </div>
 </section> -->
@@ -212,24 +210,25 @@
 <section class="section" style="margin-top:-50px; margin-bottom:-50px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
-        <div class="section-title">
-          <h2 class="title is-3 is-centered">VBench Evaluation Results of Recent Video Generative Models</h2>
-        </div>
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <div class="publication-img">
-              <img id="architecture" src="assets/vbench/images/dim_results/all-dim.jpg" style="width:600px; margin-top:10px;margin-bottom:10px;"/>
-            </div>
+      <div class="section-title">
+        <h2 class="title is-3 is-centered">V-STaR Evaluation Results of each domain.</h2>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="publication-img">
+            <iframe id="architecture" src="assets/vbench/pdf/dim_results/radar.pdf" style="width:600px; height:800px; margin-top:10px; margin-bottom:10px;" frameborder="0">
+              您的浏览器不支持嵌入 PDF，请<a href="assets/vbench/pdf/dim_results/all-dim.pdf">下载 PDF</a>查看。
+            </iframe>
           </div>
         </div>
-        <p style="margin-top: 0;">
-          We visualize the evaluation results of the 12 most recent top-performing long video generation models across 16 VBench dimensions. We normalize the results per dimension for clearer comparisons.
-        </p>
-        <p class="is-size-7" style="margin-top: 0;">
-          The values have been normalized for better readability of the chart. The normalization process involves scaling each set of performance values to a common scale between 0.3 and 0.8. The formula used for normalization is: (value - min_value) / (max_value - min_value).
+      </div>
+      <p style="margin-top: 0;">
+        We visualize the performance on each domain across 9 domains using mAM (left) and mLGM (right). 
+      </p>
     </div>
   </div>
 </section>
+
 
 <!-- LeaderBoard -->
 <section class="hero is-light" style="margin-top:-50px; margin-bottom:-50px;">
