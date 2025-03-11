@@ -90,7 +90,7 @@
             Nanjing University &nbsp;&nbsp;
             <br>
             <sup>3</sup>
-            -Lab, Nanyang Technological University &nbsp;&nbsp;
+            MMLab, Nanyang Technological University &nbsp;&nbsp;
           </span>
         </div>
 
@@ -133,7 +133,7 @@
                 <span class="icon">
                   <img src="assets/vbench/hf-logo.svg" style="display:block;width:330px;height:240px" />
                 </span>
-                <span>Huggingface Demo</span>
+                <span>Huggingface Dataset</span>
               </a>
             </span>
             <!-- Dataset Link. -->
@@ -160,38 +160,12 @@
       <div class="hero-body">
             <img src="assets/vbench/images/dim_results/fig_teaser_new.jpg" style="width:1000px; margin-bottom:10px" alt="Teaser."/>
       <p style="margin-top: 0;">
-        <b>Overview of VBench.</b> We propose VBench, a comprehensive benchmark suite for video generative models. We design a comprehensive and hierarchical <b>Evaluation Dimension Suite</b> to decompose "video generation quality" into multiple well-defined dimensions to facilitate fine-grained and objective evaluation. For each dimension and each content category, we carefully design a <b>Prompt Suite</b> as test cases, and sample <b>Generated Videos</b> from a set of video generation models. For each evaluation dimension, we specifically design an <b>Evaluation Method Suite</b>, which uses carefully crafted method or designated pipeline for automatic objective evaluation. We also conduct <b>Human Preference Annotation</b> for the generated videos for each dimension, and show that VBench evaluation results are <b>well aligned with human perceptions</b>. VBench provides valuable insights and will be open-sourced.
-      </p>
+        <b>Motivation of VBench.</b> Illustration of the challenge in evaluating spatio-temporal reasoning ability. 
+   In both examples, the model correctly identifies objects, but its performance on related temporal and spatial questions varies greatly. 
+   This inconsistency suggests that correct answers may result from pretraining co-occurrence biases rather than true understanding. Existing benchmarks focus on object identification but fail to determine whether models truly engage in spatio-temporal reasoning. Our V-STaR benchmark fills this gap by evaluating how models integrate spatial, temporal, and causal relationships in video understanding.
     </div>
   </div>
 </section> -->
-
-<!-- teaser -->
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%; max-width: none;">
-      <div class="hero-body">
-            <img src="assets/vbench/images/dim_results/fig_extention_teaser.jpg" style="width:100%; margin-bottom:10px" alt="Teaser."/>
-      <p style="margin-top: 0;">
-        <b>Overview of VBench.</b> We propose VBench, a comprehensive benchmark suite for video generative models. We design a comprehensive and hierarchical <b>Evaluation Dimension Suite</b> to decompose "video generation quality" into multiple well-defined dimensions to facilitate fine-grained and objective evaluation. For each dimension and each content category, we carefully design a <b>Prompt Suite</b> as test cases, and sample <b>Generated Videos</b> from a set of video generation models. For each evaluation dimension, we specifically design an <b>Evaluation Method Suite</b>, which uses carefully crafted method or designated pipeline for automatic objective evaluation. We also conduct <b>Human Preference Annotation</b> for the generated videos for each dimension, and show that VBench evaluation results are <b>well aligned with human perceptions</b>. VBench can provide valuable insights from multiple perspectives. <b>VBench++</b> supports a wide range of video generation tasks, including text-to-video and image-to-video, with an adaptive Image Suite for fair evaluation across different settings. It evaluates not only technical quality but also the trustworthiness of generative models, offering a comprehensive view of model performance. We continually incorporate more video generative models into VBench to inform the community about the evolving landscape of video generation.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- Paper video. -->
-<section class="hero is-light">
-  <div class="columns is-centered has-text-centered"  style="margin-top: 0px; margin-bottom: 10px;">
-    <div class="column is-three-fifths">
-      <h2 class="title is-3">Video</h2>
-      <div class="publication-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7IhCC8Qqn8Y?si=_gpWAOXWOi2OcaIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- / Paper video.   -->
 
 
 <!-- Abstract. -->
@@ -202,7 +176,7 @@
         <h2 class="title is-3 is-centered">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-              Video generation has witnessed significant advancements, yet evaluating these models remains a challenge. A comprehensive evaluation benchmark for video generation is indispensable for two reasons: 1) Existing metrics do not fully align with human perceptions; 2) An ideal evaluation system should provide insights to inform future developments of video generation. To this end, we present <b>VBench</b>, a comprehensive benchmark suite that dissects "video generation quality" into specific, hierarchical, and disentangled dimensions, each with tailored prompts and evaluation methods. VBench has three appealing properties: <b>1) Comprehensive Dimensions</b>: VBench comprises 16 dimensions in video generation (e.g., subject identity inconsistency, motion smoothness, temporal flickering, and spatial relationship, etc).  The evaluation metrics with fine-grained levels reveal individual models' strengths and weaknesses.  <b>2) Human Alignment</b>: We also provide a dataset of human preference annotations to validate our benchmarks' alignment with human perception, for each evaluation dimension respectively. <b>3) Valuable Insights</b>: We look into current models' ability across various evaluation dimensions, and various content types. We also investigate the gaps between video and image generation models. We will open-source VBench, including all prompts, evaluation methods, generated videos, and human preference annotations, and also include more video generation models in VBench to drive forward the field of video generation.
+           Human processes video reasoning in a sequential spatio-temporal reasoning logic, we first identify the relevant frames (<b>``when"</b>) and then analyse the spatial relationships (``<b>where</b>") between key objects, and finally leverage these relationships to draw inferences (``<b>what</b>"). However, can Video Large Language Models (Video-LLMs) also ``<b>reason through a sequential spatio-temporal logic</b>” in videos? Existing Video-LLM benchmarks primarily focus on assessing object presence, neglecting relational reasoning. Consequently, it is difficult to measure whether a model truly comprehends object interactions (actions/events) in videos or merely relies on pre-trained ``memory" of co-occurrences as biases in generating answers. In this work, we introduce a <b>V</b>ideo <b>S</b>patio-<b>T</b>empor<b>a</b>l <b>R</b>easoning (<b>V-STaR</b>) benchmark to address these shortcomings. The key idea is to decompose video understanding into a Reverse Spatio-Temporal Reasoning (RSTR) task that simultaneously evaluates what objects are present, when events occur, and where they are located while capturing the underlying Chain-of-thought (CoT) logic. To support this evaluation, we construct a dataset to elicit the spatial-temporal reasoning process of Video-LLMs. It contains coarse-to-fine CoT questions generated by a semi-automated GPT-4-powered pipeline, embedding explicit reasoning chains to mimic human cognition. Experiments from 14 Video-LLMs on our V-STaR reveal significant gaps between current Video-LLMs and the needs for robust and consistent spatio-temporal reasoning. 
           </p>
         </div>
       </div>
@@ -218,7 +192,7 @@
         <h2 class="title is-3 is-centered">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-              Video generation has witnessed significant advancements, yet evaluating these models remains a challenge. A comprehensive evaluation benchmark for video generation is indispensable for two reasons: 1) Existing metrics do not fully align with human perceptions; 2) An ideal evaluation system should provide insights to inform future developments of video generation. To this end, we present <b>VBench</b>, a comprehensive benchmark suite that dissects "video generation quality" into specific, hierarchical, and disentangled dimensions, each with tailored prompts and evaluation methods. VBench has three appealing properties: <b>1) Comprehensive Dimensions</b>: VBench comprises 16 dimensions in video generation (e.g., subject identity inconsistency, motion smoothness, temporal flickering, and spatial relationship, etc).  The evaluation metrics with fine-grained levels reveal individual models' strengths and weaknesses.  <b>2) Human Alignment</b>: We also provide a dataset of human preference annotations to validate our benchmarks' alignment with human perception, for each evaluation dimension respectively. <b>3) Valuable Insights</b>: We look into current models' ability across various evaluation dimensions, and various content types. We also investigate the gaps between video and image generation models. <b>4) Versatile Benchmarking</b>: VBench++ is designed to evaluate a wide range of video generation tasks, including text-to-video and image-to-video. We introduce a high-quality Image Suite with an adaptive aspect ratio to enable fair evaluations across different image-to-video generation settings. Beyond assessing technical quality, VBench++ evaluates the trustworthiness of generative models, providing a more holistic view of model performance. <b>5) Full Open-Sourcing</b>: We fully open-source VBench, including all prompts, evaluation methods, generated videos, and human preference annotations. We also continually add new video generation models to the VBench leaderboard to drive forward the field of video generation.
+              Human processes video reasoning in a sequential spatio-temporal reasoning logic, we first identify the relevant frames (``when") and then analyse the spatial relationships (``where") between key objects, and finally leverage these relationships to draw inferences (``what"). However, can Video Large Language Models (Video-LLMs) also ``reason through a sequential spatio-temporal logic” in videos? Existing Video-LLM benchmarks primarily focus on assessing object presence, neglecting relational reasoning. Consequently, it is difficult to measure whether a model truly comprehends object interactions (actions/events) in videos or merely relies on pre-trained ``memory" of co-occurrences as biases in generating answers. In this work, we introduce a \textbf{V}ideo \textbf{S}patio-\textbf{T}empor\textbf{a}l \textbf{R}easoning (V-STaR) benchmark to address these shortcomings. The key idea is to decompose video understanding into a Reverse Spatio-Temporal Reasoning (RSTR) task that simultaneously evaluates what objects are present, when events occur, and where they are located while capturing the underlying Chain-of-thought (CoT) logic. To support this evaluation, we construct a dataset to elicit the spatial-temporal reasoning process of Video-LLMs. It contains coarse-to-fine CoT questions generated by a semi-automated GPT-4-powered pipeline, embedding explicit reasoning chains to mimic human cognition. Experiments from 14 Video-LLMs on our V-STaR reveal significant gaps between current Video-LLMs and the needs for robust and consistent spatio-temporal reasoning. 
           </p>
         </div>
       </div>
