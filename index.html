@@ -237,78 +237,185 @@
             By default, this leaderboard is sorted by results with subtitles. To view other sorted results, please click on the corresponding cell.
           </p>
 
-          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto; border-collapse: collapse;">
+          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
             <thead>
               <tr style="background-color: #f2f2f2;">
-                <th rowspan="2" style="vertical-align: middle; width: 50px;">#</th>
                 <th rowspan="2" style="vertical-align: middle; width: 180px;"><strong>Model</strong></th>
-                <th rowspan="2" style="vertical-align: middle; width: 50px;">LLM<br>Params</th>
-                <th rowspan="2" style="vertical-align: middle; width: 100px;">Frames</th>
-                <th rowspan="2" style="vertical-align: middle; width: 110px;">Date</th>
-                <!-- 分组列 -->
-                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Overall (%)</strong></th>
-                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Short Video (%)</strong></th>
-                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Medium Video (%)</strong></th> 
-                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Long Video (%)</strong></th> 
+                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Short</strong></th>
+                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Medium</strong></th>
+                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>Long</strong></th>
+                <th colspan="2" style="vertical-align: middle; width: 300px;"><strong>All</strong></th>
               </tr>
               <tr style="background-color: #f2f2f2;">
-                <th style="vertical-align: middle;">w/o subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w/o subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w/o subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w/o subs <i class="fa fa-sort" aria-hidden="true"></i></th>
-                <th style="vertical-align: middle;">w subs <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mAM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mLGM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mAM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mLGM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mAM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mLGM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mAM <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th style="vertical-align: middle;">mLGM <i class="fa fa-sort" aria-hidden="true"></i></th>
               </tr>
             </thead>
             <tbody>
-              <!-- 示例行（你可以根据实际数据动态生成行） -->
-              <tr style="background-color: #ffffff;">
-                <td style="vertical-align: middle;">1</td>
-                <td style="text-align: left; padding: 2px 10px;">
-                  <b>
-                    <a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf" class="ext-link" style="font-size: 16px; margin-left: 5px;">Gemini 1.5 Pro</a>
-                    <p style="font-size: 12px; margin-left: 5px; color: #858383;">Google</p>
-                  </b>
-                </td>
-                <td style="vertical-align: middle;">-</td>
-                <td style="vertical-align: middle;">0.5 fps</td>
-                <td style="vertical-align: middle;">2024-06-15</td>
-                <td style="vertical-align: middle;"><b>75.0</b></td>
-                <td style="vertical-align: middle;"><b>81.3</b></td>
-                <td style="vertical-align: middle;">81.7</td>
-                <td style="vertical-align: middle;">84.5</td>
-                <td style="vertical-align: middle;">74.3</td>
-                <td style="vertical-align: middle;">81.0</td>
-                <td style="vertical-align: middle;">67.4</td>
-                <td style="vertical-align: middle;">77.4</td>                                 
+              <tr>
+                <td><a href="https://huggingface.co/OpenAIGPT4o" target="_blank"><strong>GPT-4o</strong></a></td>
+                <td><strong>27.49</strong></td>
+                <td><strong>38.56</strong></td>
+                <td><u>26.96</u></td>
+                <td><strong>40.58</strong></td>
+                <td>14.86</td>
+                <td>19.28</td>
+                <td><u>26.75</u></td>
+                <td><strong>38.15</strong></td>
               </tr>
-              <tr style="background-color: #f9f9f9;">
-                <td style="vertical-align: middle;">2</td>
-                <td style="text-align: left; padding: 2px 10px;">
-                  <b>
-                    <a href="https://huggingface.co/Gemini2" target="_blank"><strong>Gemini-2-Flash</strong></a>
-                  </b>
-                </td>
-                <td style="vertical-align: middle;">-</td>
-                <td style="vertical-align: middle;">0.5 fps</td>
-                <td style="vertical-align: middle;">2024-06-15</td>
-                <td style="vertical-align: middle;">24.97</td>
-                <td style="vertical-align: middle;">32.07</td>
-                <td style="vertical-align: middle;"><strong>28.99</strong></td>
-                <td style="vertical-align: middle;"><u>40.35</u></td>
-                <td style="vertical-align: middle;"><strong>37.81</strong></td>
-                <td style="vertical-align: middle;"><strong>56.14</strong></td>
-                <td style="vertical-align: middle;"><strong>26.87</strong></td>
-                <td style="vertical-align: middle;"><u>35.57</u></td>
+              <tr>
+                <td><a href="https://huggingface.co/Gemini2" target="_blank"><strong>Gemini-2-Flash</strong></a></td>
+                <td>24.97</td>
+                <td>32.07</td>
+                <td><strong>28.99</strong></td>
+                <td><u>40.35</u></td>
+                <td><strong>37.81</strong></td>
+                <td><strong>56.14</strong></td>
+                <td><strong>26.87</strong></td>
+                <td><u>35.57</u></td>
               </tr>
-              <!-- 更多行... -->
+              <tr>
+                <td><a href="https://huggingface.co/zhang2025videollama" target="_blank"><strong>Video-LLaMA3</strong></a></td>
+                <td>21.68</td>
+                <td>26.62</td>
+                <td>21.84</td>
+                <td>27.23</td>
+                <td><u>22.46</u></td>
+                <td><u>28.83</u></td>
+                <td>21.66</td>
+                <td>27.04</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/bai2025qwen2" target="_blank"><strong>Qwen2.5-VL</strong></a></td>
+                <td><u>25.51</u></td>
+                <td><u>34.84</u></td>
+                <td>23.67</td>
+                <td>32.87</td>
+                <td>2.20</td>
+                <td>2.27</td>
+                <td>23.96</td>
+                <td>32.39</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/wang2024qwen2" target="_blank"><strong>Qwen2-VL</strong></a></td>
+                <td>15.78</td>
+                <td>17.50</td>
+                <td>18.47</td>
+                <td>21.22</td>
+                <td>14.09</td>
+                <td>17.53</td>
+                <td>16.71</td>
+                <td>18.79</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/chen2024expanding" target="_blank"><strong>InternVL-2.5</strong></a></td>
+                <td>17.94</td>
+                <td>22.90</td>
+                <td>17.94</td>
+                <td>23.06</td>
+                <td>9.58</td>
+                <td>11.19</td>
+                <td>17.60</td>
+                <td>24.92</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/zhang2024video" target="_blank"><strong>Llava-Video</strong></a></td>
+                <td>22.37</td>
+                <td>30.23</td>
+                <td>18.28</td>
+                <td>22.77</td>
+                <td>18.23</td>
+                <td>25.23</td>
+                <td>20.82</td>
+                <td>27.33</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/li2024mvbench" target="_blank"><strong>VideoChat2</strong></a></td>
+                <td>17.57</td>
+                <td>21.02</td>
+                <td>17.20</td>
+                <td>20.50</td>
+                <td>5.28</td>
+                <td>5.64</td>
+                <td>17.02</td>
+                <td>20.26</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/liu2024oryx" target="_blank"><strong>Oryx-1.5</strong></a></td>
+                <td>13.17</td>
+                <td>14.25</td>
+                <td>14.83</td>
+                <td>16.46</td>
+                <td>11.89</td>
+                <td>13.99</td>
+                <td>15.11</td>
+                <td>13.83</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/fei2024video" target="_blank"><strong>Video-CCAM-v1.2</strong></a></td>
+                <td>21.66</td>
+                <td>34.09</td>
+                <td>19.62</td>
+                <td>28.36</td>
+                <td>12.61</td>
+                <td>15.80</td>
+                <td>20.41</td>
+                <td>30.70</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/ren2024timechat" target="_blank"><strong>TimeChat</strong></a></td>
+                <td>13.70</td>
+                <td>15.56</td>
+                <td>13.22</td>
+                <td>15.06</td>
+                <td>3.24</td>
+                <td>3.37</td>
+                <td>13.07</td>
+                <td>14.78</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/huang2024vtimellm" target="_blank"><strong>VTimeLLM</strong></a></td>
+                <td>18.31</td>
+                <td>23.19</td>
+                <td>18.15</td>
+                <td>22.44</td>
+                <td>5.52</td>
+                <td>5.89</td>
+                <td>17.71</td>
+                <td>22.04</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/guo2024trace" target="_blank"><strong>TRACE</strong></a></td>
+                <td>11.77</td>
+                <td>12.96</td>
+                <td>12.49</td>
+                <td>13.87</td>
+                <td>13.59</td>
+                <td>15.30</td>
+                <td>12.01</td>
+                <td>13.25</td>
+              </tr>
+              <tr>
+                <td><a href="https://huggingface.co/yuan2025sa2va" target="_blank"><strong>Sa2VA</strong></a></td>
+                <td>18.14</td>
+                <td>22.01</td>
+                <td>16.32</td>
+                <td>18.92</td>
+                <td>8.85</td>
+                <td>9.70</td>
+                <td>17.11</td>
+                <td>20.31</td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
-                <!-- 注意：colspan的值需要与你的表格总列数一致，此处总共13列 -->
-                <td colspan="13" style="border-top: 2px solid #000;">&nbsp;</td>
+                <td colspan="9" style="border-top: 2px solid #000;">&nbsp;</td>
               </tr>
             </tfoot>
           </table>
@@ -320,6 +427,7 @@
     </div>
   </div>
 </section>
+
 
           
 <!-- LeaderBoard -->
