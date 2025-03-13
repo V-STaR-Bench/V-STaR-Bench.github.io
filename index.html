@@ -428,6 +428,45 @@
   </div>
 </section>
 
+<!-- 排序功能脚本 -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 获取表格和 tbody 元素
+  const table = document.getElementById("results");
+  const tbody = table.querySelector("tbody");
+  // 选择第二行所有带排序图标的 th 单元格
+  const headers = table.querySelectorAll("thead tr:nth-child(2) th");
+
+  headers.forEach((header, index) => {
+    header.style.cursor = "pointer"; // 鼠标悬停时显示手型
+    header.addEventListener("click", function() {
+      // 获取当前排序方向，默认为升序
+      let currentDir = header.getAttribute("data-sort") || "asc";
+      // 切换排序方向
+      let newDir = currentDir === "asc" ? "desc" : "asc";
+      header.setAttribute("data-sort", newDir);
+
+      // 因为表格第一列为模型名称，故对应数据列索引为 index+1
+      const colIndex = index + 1;
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      // 对行数据按目标列的数值进行排序
+      rows.sort((rowA, rowB) => {
+        const cellA = rowA.children[colIndex].textContent.trim();
+        const cellB = rowB.children[colIndex].textContent.trim();
+        const valueA = parseFloat(cellA) || 0;
+        const valueB = parseFloat(cellB) || 0;
+        return newDir === "asc" ? valueA - valueB : valueB - valueA;
+      });
+
+      // 更新排序后的行
+      rows.forEach(row => tbody.appendChild(row));
+    });
+  });
+});
+</script>
+
+
 
           
 <!-- LeaderBoard -->
