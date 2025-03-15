@@ -27,19 +27,19 @@
 
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
-  <link rel="stylesheet" href="./assets/vbench/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/vbench/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./assets/vbench/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./assets/vbench/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/vstar/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/vstar/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/vstar/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/vstar/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./assets/vbench/css/index.css">
+  <link rel="stylesheet" href="./assets/vstar/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./assets/vbench/js/fontawesome.all.min.js"></script>
-  <script src="./assets/vbench/js/bulma-carousel.min.js"></script>
-  <script src="./assets/vbench/js/bulma-slider.min.js"></script>
-  <script src="./assets/vbench/js/index.js"></script>
+  <script defer src="./assets/vstar/js/fontawesome.all.min.js"></script>
+  <script src="./assets/vstar/js/bulma-carousel.min.js"></script>
+  <script src="./assets/vstar/js/bulma-slider.min.js"></script>
+  <script src="./assets/vstar/js/index.js"></script>
 </head>
 <body>
 
@@ -105,7 +105,7 @@
             </span>
             <!-- Code Link. -->
             <span class="link-block">
-              <a href="https://github.com/V-STaR-Bench/V_STaR" target="_blank"
+              <a href="https://github.com/V-STaR-Bench/V-STaR" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
@@ -127,13 +127,13 @@
             <span class="link-block">
               <a href="https://v-star-bench-v-star-leaderboard.hf.space" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
-                  <img src="assets/vbench/hf-logo.svg" style="display:block;width:330px;height:240px" />
+                  <img src="assets/vstar/hf-logo.svg" style="display:block;width:330px;height:240px" />
                 </span>
                 <span>Dataset</span>
               </a>
             <!-- Supplementary Material Link. -->
             <span class="link-block">
-              <a href="https://raw.githubusercontent.com/V-STaR-Bench/V-STaR-Bench.github.io/main/assets/vbench/supply_file.pdf"
+              <a href="https://raw.githubusercontent.com/V-STaR-Bench/V-STaR-Bench.github.io/main/assets/vstar/supply_file.pdf"
                download="supply_file.pdf"
                target="_blank"
                class="external-link button is-normal is-rounded is-dark">
@@ -154,7 +154,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop" style="width: 50%; max-width: none;">
       <div class="hero-body">
-            <img src="assets/vbench/images/dim_results/motivation_v2.png" style="width:1000px; margin-bottom:10px" alt="Teaser."/>
+            <img src="assets/vstar/images/dim_results/motivation_v2.png" style="width:1000px; margin-bottom:10px" alt="Teaser."/>
       <p style="margin-top: 0;">
         <b>Motivation of V-STaR.</b> Illustration of the challenge in evaluating spatio-temporal reasoning ability. In both examples, the model correctly identifies objects, but its performance on related temporal and spatial questions varies greatly. This inconsistency suggests that correct answers may result from pretraining co-occurrence biases rather than true understanding. Existing benchmarks focus on object identification but fail to determine whether models truly engage in spatio-temporal reasoning. Our V-STaR benchmark fills this gap by evaluating how models integrate spatial, temporal, and causal relationships in video understanding.
     </div>
@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </section>
 
   
-<!-- Statistic Analysis -->
+<!-- Qualitative Analysis -->
 <section class="section" style="margin-top:-100px; margin-bottom:-100px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -457,262 +457,55 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="columns is-centered has-text-centered">
           <div class="column">
             <div class="publication-img">
-              <img id="architecture" src="assets/vbench/images/dim_results/statistics_v2.png" style="width:1200px; margin-top:10px;margin-bottom:10px;"/>
+              <img id="architecture" src="assets/vstar/images/vis/visualization.pdf" style="width:1200px; margin-top:10px;margin-bottom:10px;"/>
             </div>
           </div>
           </div>
         <p style="margin-top: 0;">
-          Dataset statistics of video domain and length, and word cloud of objects in video. 
+          An example showcasing the performance of five models on the video sourced from VidSTG.
         </p>
   </div>
 </section>
 
-<!-- Radar_Recent Models -->
- <section class="section" style="margin-top:-100px; margin-bottom:-100px;">
-   <div class="container is-max-desktop">
-     <div class="hero-body">
-         <div class="section-title">
-           <h2 class="title is-3 is-centered">V-STaR evaluation results of each domain </h2>
-         </div>
-         <div class="columns is-centered has-text-centered">
-           <div class="column">
-             <div class="publication-img">
-               <img id="architecture" src="assets/vbench/images/dim_results/radar.png" style="width:600px; margin-top:10px;margin-bottom:10px;"/>
-             </div>
-           </div>
-           </div>
-         <p style="margin-top: 0;">
-           We visualize the performance on each domain across 9 domains using mAM (left) and mLGM (right). 
-         </p>
-   </div>
- </section>
-  
-
-<section class="section"  style="margin-top:-100px; margin-bottom:-140px;">
-  <div class="hero-body">
-
-    <div class="container is-max-desktop">
-
-
-      <div class="section-title">
-        <h2 class="title is-3">Video Quality Dimensions</h2>
-        <h2 class="subtitle has-text-centered">Display of Evaluation Examples in Different Dimensions.<br>(the larger score denotes a better performance)</h2>
-      </div>
-      <!-- Single Line -->
-      <div id="results-carousel-face" class="carousel results-carousel">
-        <div class="item item-puppet">
-          <div class="carousel-content">
-                <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-                <source src="assets/vbench/images/dim_results/ppt_mp4_v3/flicker_and_subject.mp4" type="video/mp4">
-              </video>
-          </div>
-        </div>
-        <div class="item item-round_bird">
-          <div class="carousel-content">
-                <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-                <source src="assets/vbench/images/dim_results/ppt_mp4_v3/backdround_and_motion.mp4" type="video/mp4">
-              </video>      
-          </div>
-        </div>
-        <div class="item item-puppet">
-          <div class="carousel-content">
-            <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-              <source src="assets/vbench/images/dim_results/ppt_mp4_v3/dynamic_and_aesthetic.mp4" type="video/mp4">
-            </video>    
-          </div>
-        </div>
-        <div class="item item-round_bird">
-          <div class="carousel-content">
-                <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-                <source src="assets/vbench/images/dim_results/ppt_mp4_v3/technical_and_flicker.mp4" type="video/mp4">
-              </video>      
-          </div>
-        </div>
-      </div>
-    
-  </div>
-</section>
-
-
-<section class="section"  style="margin-top:-100px; margin-bottom:-60px;">
-  <div class="hero-body">
-
-    <div class="container is-max-desktop">
-
-
-      <div class="section-title">
-        <h2 class="title is-3">Video-Condition Consistency Dimensions</h2>
-        <h2 class="subtitle has-text-centered">Display of Evaluation Examples in Different Dimensions.<br>(the larger score denotes a better performance)</h2>
-      </div>
-      <!-- Single Line -->
-      <div id="results-carousel-face" class="carousel results-carousel">
-        <div class="item item-puppet">
-          <div class="carousel-content">
-                <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-                <source src="assets/vbench/images/dim_results/ppt_mp4_v3/object_and_multiple.mp4" type="video/mp4">
-              </video>
-          </div>
-        </div>
-        <div class="item item-round_bird">
-          <div class="carousel-content">
-                <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-                <source src="assets/vbench/images/dim_results/ppt_mp4_v3/action_and_color.mp4" type="video/mp4">
-              </video>      
-          </div>
-        </div>
-        <div class="item item-puppet">
-          <div class="carousel-content">
-            <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-              <source src="assets/vbench/images/dim_results/ppt_mp4_v3/relation_and_scene.mp4" type="video/mp4">
-            </video>    
-          </div>
-        </div>
-        <div class="item item-round_bird">
-          <div class="carousel-content">
-            <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-              <source src="assets/vbench/images/dim_results/ppt_mp4_v3/appearance_and_temporal_style.mp4" type="video/mp4">
-            </video>   
-          </div>
-        </div>
-        <div class="item item-puppet">
-          <div class="carousel-content">
-            <video id="dimensions" autoplay="" muted="" loop="" playsinline="" height="100%">
-              <source src="assets/vbench/images/dim_results/ppt_mp4_v3/overall_and_object.mp4" type="video/mp4">
-            </video>    
-          </div>
-        </div>
-      </div>
-    
-  </div>
-</section>
-
-
-
-<!-- prompt_suite_stats -->
+<!-- Qualitative Analysis -->
 <section class="section" style="margin-top:-100px; margin-bottom:-100px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
         <div class="section-title">
-          <h2 class="title is-3 is-centered">Prompt Suite Statistics</h2>
+          <h2 class="title is-3 is-centered">Benchmark Statistics</h2>
         </div>
         <div class="columns is-centered has-text-centered">
           <div class="column">
             <div class="publication-img">
-              <img id="architecture" src="assets/vbench/images/dim_results/prompt_suite_stats.jpg" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+              <img id="architecture" src="assets/vstar/images/vis/visualization_supp1.pdf" style="width:1200px; margin-top:10px;margin-bottom:10px;"/>
             </div>
           </div>
-        </div>
+          </div>
         <p style="margin-top: 0;">
-          The two graphs provide an overview of our prompt suites. <b>Left: </b>the word cloud to visualize word distribution of our prompt suites. <b>Right: </b>the
-          number of prompts across different evaluation dimensions and different content categories.
+          An example showcasing the performance of five models on the video sourced from TVQA+.
         </p>
-    </div>
   </div>
 </section>
 
-
-
-<!-- Radar_sd -->
+<!-- Qualitative Analysis -->
 <section class="section" style="margin-top:-100px; margin-bottom:-100px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
         <div class="section-title">
-          <h2 class="title is-3 is-centered">T2V vs. T2I</h2>
+          <h2 class="title is-3 is-centered">Benchmark Statistics</h2>
         </div>
         <div class="columns is-centered has-text-centered">
           <div class="column">
             <div class="publication-img">
-              <img id="architecture" src="assets/vbench/images/dim_results/fig_paper_radar_sd_new.jpg" style="width:700px; margin-top:10px;margin-bottom:10px;;margin-left:40px;"/>
+              <img id="architecture" src="assets/vstar/images/vis/visualization_supp2.pdf" style="width:1200px; margin-top:10px;margin-bottom:10px;"/>
             </div>
           </div>
-        </div>
+          </div>
         <p style="margin-top: 0;">
-          We use VBench to evaluate other models and baselines for further comparative analysis of T2V models, such as text-to-image (T2I) generation models
+          An example showcasing the performance of five models on the video sourced from GOT-10k.
         </p>
-        <p class="is-size-7" style="margin-top: 0;">
-          The values have been normalized for better readability of the chart. The normalization process involves scaling each set of performance values to a common scale between 0.3 and 0.8. The formula used for normalization is: (value - min_value) / (max_value - min_value).
-    </div>
   </div>
 </section>
-
-
-<!-- Radar_per_Class -->
-<section class="section" style="margin-top:-100px; margin-bottom:-50px;">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <div class="section-title">
-          <h2 class="title is-3 is-centered">VBench Results across Eight Content Categories</h2>
-        </div>
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <div class="publication-img">
-              <img id="architecture" src="assets/vbench/images/dim_results/fig_paper_radar_per_class_new.jpg" style="width:1500px; margin-top:10px;margin-bottom:10px;"/>
-            </div>
-          </div>
-        </div>
-        <p style="margin-top: 0;">
-          For each chart, we plot the VBench evaluation results across eight different content categories, benchmarked by our <i>Prompt Suite per Category</i>.
-        </p>
-        <p class="is-size-7" style="margin-top: 0;">
-          The results are linearly normalized between 0 and 1 for better visibility across categories.
-    </div>
-  </div>
-</section>
-
-
-<!-- image suite crop pipe -->
-<section class="section" style="margin-top:-100px; margin-bottom:-10px;">
-  <div class="container is-max-desktop" style="width: 33%; max-width: none;">
-    <div class="hero-body">
-        <div class="section-title">
-          <h2 class="title is-3 is-centered">Image Suite Cropping Pipeline of VBench++</h2>
-        </div>
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <div style="margin-top:20px; margin-bottom: 10px;">
-              <img src="assets/vbench/images/dim_results/fig_image_crop_pipeline_vertical.jpg" style="width: 100%;" alt="Image 1">
-              <p style="font-size: 18px; font-weight: bold;">(a) Cropping Pipeline for Portrait Images.</p>
-            </div>
-          
-            <!-- 第二张图片及其标注 -->
-            <div>
-              <img src="assets/vbench/images/dim_results/fig_image_crop_pipeline_horizontal.jpg" style="width: 100%;" alt="Image 2">
-              <p style="font-size: 18px; font-weight: bold;">(b) Cropping Pipeline for Landscape Images.</p>
-            </div>
-          </div>
-        </div>
-        <p style="margin-top: 0;">
-          <b>Image Suite Pipeline for Adaptive Aspect Ratio Cropping.</b> We provide a pipeline that crops images to various aspect ratios while preserving key content. <b>(a) Portrait Images.</b>  If the original image's width is less than its height, it is first cropped to a 1:1 ratio (red bounding box). followed by a second crop to a 16:9 aspect ratio (yellow bounding box). Additional crops interpolate between the 1:1 red box and the 16:9 yellow box to produce other common ratios (1:1, 7:4, 8:5, 16:9). <b>(b) Landscape Images.</b> If the original image's width is greater than its height, we first crop the image to a 16:9 aspect ratio (red bounding box), and further crop the 16:9 image to a 1:1 aspect ratio (yellow bounding box). We then perform additional crops between the 16:9 red box and 1:1 yellow box to obtain the common aspect ratios (1:1, 7:4, 8:5, 16:9).
-        </p>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- image suite stats -->
-<section class="section" style="margin-top:-100px; margin-bottom:-100px;">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <div class="section-title">
-          <h2 class="title is-3 is-centered">Content Distribution of Image Suite</h2>
-        </div>
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <div class="publication-img">
-              <img id="architecture" src="assets/vbench/images/dim_results/pie_chart_image_suite.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
-            </div>
-          </div>
-        </div>
-        <!-- <p style="margin-top: 0; margin-bottom: 30px;">
-          Our image suite encompasses a wide variety of content to ensure a comprehensive evaluation.
-        </p> -->
-    </div>
-  </div>
-</section>
-
-
-
 
 
 <!-- BibTeX -->
@@ -720,18 +513,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="container is-max-desktop content" style="margin-top: 40px; margin-bottom: 20px;">
     <h2 class="title">BibTeX</h2>
     <p>If you find our work useful, please consider citing our paper:</p>
-    <pre><code>@InProceedings{huang2023vbench,
-      title={{VBench}: Comprehensive Benchmark Suite for Video Generative Models},
-      author={Huang, Ziqi and He, Yinan and Yu, Jiashuo and Zhang, Fan and Si, Chenyang and Jiang, Yuming and Zhang, Yuanhan and Wu, Tianxing and Jin, Qingyang and Chanpaisit, Nattapol and Wang, Yaohui and Chen, Xinyuan and Wang, Limin and Lin, Dahua and Qiao, Yu and Liu, Ziwei},
-      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-      year={2024}
-}
-
-@article{huang2024vbench++,
-  title={VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models},
-  author={Huang, Ziqi and Zhang, Fan and Xu, Xiaojie and He, Yinan and Yu, Jiashuo and Dong, Ziyue and Ma, Qianli and Chanpaisit, Nattapol and Si, Chenyang and Jiang, Yuming and Wang, Yaohui and Chen, Xinyuan and Chen, Ying-Cong and Wang, Limin and Lin, Dahua and Qiao, Yu and Liu, Ziwei},
-  journal={arXiv preprint arXiv:2411.13503},
-  year={2024}
+    <pre><code> to be updated
 }</code></pre>
   </div>
 </section>
@@ -744,10 +526,10 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="https://vchitect.github.io/VBench-project/">
+         href="https://v-star-bench.github.io/">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/Vchitect/VBench" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/V-STaR-Bench/V-STaR" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
